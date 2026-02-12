@@ -6,6 +6,9 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
@@ -14,6 +17,9 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.name
 
 
 class Cart(models.Model):
