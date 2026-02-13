@@ -1,0 +1,1 @@
+![ERD Diagram](archieve/ecommerce_db_ERD.png)
